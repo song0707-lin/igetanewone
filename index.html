@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="俄羅斯方塊遊戲">
+  <meta property="og:title" content="俄羅斯方塊">
+  <meta property="og:description" content="來玩俄羅斯方塊吧！">
+  <title>俄羅斯方塊</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-board">
+      <!-- 這個容器用來顯示當前下落中的方塊 (使用絕對定位補間動畫) -->
+      <div id="current-piece"></div>
+      <div class="pause-screen" id="pause-screen">
+          <div class="pause-text">暫停</div>
+          <div class="pause-subtext">按下 P 鍵繼續</div>
+      </div>
+    </div>
+    <div class="game-info">
+      <div class="score">分數：<span id="score">0</span></div>
+      <div class="level">等級：<span id="level">1</span></div>
+      <div class="controls">
+          <button id="start-btn">開始遊戲</button>
+          <button id="pause-btn">暫停</button>
+          <button id="reset-btn">重置</button>
+      </div>
+      <div class="instructions">
+          <h3>操作說明：</h3>
+          <p>← →：左右移動</p>
+          <p>↓：加速下落</p>
+          <p>Z：旋轉</p>
+          <p>空白鍵：直接落下</p>
+          <p>P：暫停/繼續</p>
+      </div>
+    </div>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+</html>
