@@ -11,14 +11,17 @@
 </head>
 <body>
   <div class="game-container">
+    <!-- 遊戲區塊：左側遊戲畫面 -->
     <div class="game-board">
-      <!-- 這個容器用來顯示當前下落中的方塊 (使用絕對定位補間動畫) -->
+      <!-- 用於顯示下落中的方塊，採用補間動畫 -->
       <div id="current-piece"></div>
+      <!-- 暫停畫面 -->
       <div class="pause-screen" id="pause-screen">
           <div class="pause-text">暫停</div>
           <div class="pause-subtext">按下 P 鍵繼續</div>
       </div>
     </div>
+    <!-- 遊戲資訊區：右側顯示分數、按鈕、操作說明與特殊方塊介紹 -->
     <div class="game-info">
       <div class="score">分數：<span id="score">0</span></div>
       <div class="level">等級：<span id="level">1</span></div>
@@ -35,8 +38,16 @@
           <p>空白鍵：直接落下</p>
           <p>P：暫停/繼續</p>
       </div>
+      <div class="special-info">
+        <h3>特殊方塊介紹</h3>
+        <ul>
+          <li><strong>冰凍方塊：</strong>以 10% 機率隨機出現，落地後會凍結所在行，該行在 5 秒內無法被消除。</li>
+          <li><strong>隨機變化方塊：</strong>以 10% 機率隨機出現，落下過程中每 500ms 會隨機改變形狀，落地後定型為隨機形狀。</li>
+        </ul>
+      </div>
     </div>
   </div>
   <script src="tetris.js"></script>
 </body>
 </html>
+
