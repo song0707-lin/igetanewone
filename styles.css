@@ -5,6 +5,7 @@
     gap: 20px;
 }
 
+/* 遊戲區：設定固定尺寸並以 grid 顯示背景格子 */
 .game-board {
     position: relative;
     width: 300px;
@@ -16,7 +17,7 @@
     grid-template-rows: repeat(20, 1fr);
 }
 
-/* 用來顯示當前下落方塊的容器 */
+/* 用來顯示下落中的方塊 */
 #current-piece {
     position: absolute;
     width: 100%;
@@ -33,6 +34,7 @@
     min-width: 200px;
 }
 
+/* 格子樣式 */
 .block {
     border: 1px solid #999;
     background-color: #fff;
@@ -78,11 +80,13 @@ button:hover {
     margin-top: 0;
 }
 
+/* 分數與等級 */
 .score, .level {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+/* 暫停畫面 */
 .pause-screen {
     position: absolute;
     top: 0;
@@ -101,6 +105,25 @@ button:hover {
 .pause-text {
     font-size: 36px;
     margin-bottom: 10px;
+}
+
+.pause-subtext {
+    font-size: 16px;
+}
+
+/* 特殊方塊介紹版面 */
+.special-info {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.special-info h3 {
+  margin-top: 0;
+}
+.special-info ul {
+  list-style: disc;
+  margin-left: 20px;
 }
 
 .pause-subtext {
